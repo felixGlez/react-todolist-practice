@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
   
   body{
     margin: 0;
-    font-family: sans-serif;
+    font-family: "Josefin Sans", sans-serif;
   }
 
   a{
