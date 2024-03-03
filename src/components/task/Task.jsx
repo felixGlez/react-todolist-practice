@@ -5,12 +5,12 @@ import {
 	StyledTaskText
 } from './styles';
 
-const Task = () => {
+const Task = ({ task }) => {
 	return (
 		<>
 			<StyledTask>
 				<StyledCheckbox type='checkbox' />
-				<StyledTaskText>Hola</StyledTaskText>
+				<StyledTaskText>{task}</StyledTaskText>
 				<StyledDeleteButton src='./images/icon-cross.svg' />
 			</StyledTask>
 		</>

@@ -1,9 +1,13 @@
+import { v4 } from 'uuid';
 import Task from '../task/Task';
 
-const TasksContainer = () => {
+const TasksContainer = ({ tasks }) => {
+	console.log(tasks);
 	return (
 		<>
-			<Task />
+			{tasks.map(task => {
+				return <Task key={v4()} task={task.task} />;
+			})}
 		</>
 	);
 };
