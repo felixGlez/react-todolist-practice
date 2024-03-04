@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { v4 } from 'uuid';
 import TasksContainer from '../tasks-container/TasksContainer';
 import { StyledBody, StyledForm, StyledInput } from './styles';
 
-const Body = ({ tasks, setTasks }) => {
+const Body = () => {
+	const [tasks, setTasks] = useState([]);
+	
 	return (
 		<StyledBody>
 			<StyledForm onSubmit={event => handleSubmit(event, tasks, setTasks)}>
