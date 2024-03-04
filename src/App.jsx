@@ -5,7 +5,6 @@ import { GlobalStyles } from './styles/global-styles';
 import Body from './components/body/Body';
 
 const App = () => {
-
 	return (
 		<>
 			<GlobalStyles />
