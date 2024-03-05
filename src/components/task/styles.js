@@ -47,6 +47,7 @@ const StyledTaskText = styled.p`
 
 const StyledDeleteButton = styled.img`
 	width: 1rem;
+	cursor: pointer;
 `;
 
 export { StyledTask, StyledCheckbox, StyledTaskText, StyledDeleteButton };

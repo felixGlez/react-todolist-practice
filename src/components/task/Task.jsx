@@ -5,30 +5,22 @@ import {
 	StyledTaskText
 } from './styles';
 
-const Task = ({ tasks, setTasks, task, taskId }) => {
+const Task = ({ task, deleteTask, completeTask }) => {
 	return (
 		<>
 			<StyledTask>
-				<StyledCheckbox type='checkbox' />
+				<StyledCheckbox
+					onChange={event => completeTask(event)}
+					type='checkbox'
+				/>
 				<StyledTaskText>{task}</StyledTaskText>
 				<StyledDeleteButton
-					onClick={event => deleteTask(tasks, setTasks, task, taskId)}
+					onClick={deleteTask}
 					src='./images/icon-cross.svg'
 				/>
 			</StyledTask>
 		</>
 	);
-};
-
-const deleteTask = (tasks, setTasks, task, taskId) => {
-	console.log(tasks);
-	console.log(task);
-	console.log(taskId);
-
-	const deletedTask = tasks.filter(task => task.id !== taskId);
-	console.log(deletedTask);
-
-	setTasks(deletedTask);
 };
 
 export default Task;
