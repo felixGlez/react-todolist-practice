@@ -9,11 +9,11 @@ const Task = ({ task, deleteTask, completeTask }) => {
 	return (
 		<>
 			<StyledTask>
-				<StyledCheckbox onChange={completeTask} type='checkbox' />
-				<StyledTaskText>{task}</StyledTaskText>
+				<StyledCheckbox type='checkbox' onChange={completeTask} />
+				<StyledTaskText>{task.task}</StyledTaskText>
 				<StyledDeleteButton
-					onClick={deleteTask}
 					src='./images/icon-cross.svg'
+					onClick={deleteTask}
 				/>
 			</StyledTask>
 		</>

@@ -16,15 +16,15 @@ const StyledTask = styled.div`
 `;
 
 const StyledCheckbox = styled.input`
-	width: 30px;
+	/* width: 30px;
 	height: 30px;
 	border-radius: 50%;
 	appearance: none;
 	border: 2px solid #e3e4f1;
 	position: relative;
-	cursor: pointer;
+	cursor: pointer; */
 
-	&:checked {
+	/* &:checked {
 		border: none;
 	}
 
@@ -38,7 +38,7 @@ const StyledCheckbox = styled.input`
 		left: 0.6px;
 		width: 34px;
 		height: 28px;
-	}
+	} */
 `;
 
 const StyledTaskText = styled.p`

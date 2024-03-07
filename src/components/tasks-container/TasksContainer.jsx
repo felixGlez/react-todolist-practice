@@ -8,7 +8,7 @@ const TasksContainer = ({ tasks, setTasks }) => {
 				return (
 					<Task
 						key={v4()}
-						task={task.task}
+						task={task}
 						deleteTask={() => deleteTask(tasks, setTasks, task.id)}
 						completeTask={() => completeTask(tasks, setTasks, task.id)}
 					/>
