@@ -30,7 +30,7 @@ const deleteTask = (tasks, setTasks, taskId) => {
 
 const completeTask = (tasks, setTasks, taskId) => {
 	// versión de tasks actualizada con las modificaciones indicadas
-	const completedTask = tasks.map(task => {
+	const completedTasks = tasks.map(task => {
 		if (task.id === taskId) {
 			task.completed = !task.completed;
 		}
@@ -38,7 +38,7 @@ const completeTask = (tasks, setTasks, taskId) => {
 		return task;
 	});
 
-	setTasks(completedTask);
+	setTasks(completedTasks);
 };
 
 export default TasksContainer;
