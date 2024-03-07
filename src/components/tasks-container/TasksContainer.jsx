@@ -10,9 +10,7 @@ const TasksContainer = ({ tasks, setTasks }) => {
 						key={v4()}
 						task={task.task}
 						deleteTask={() => deleteTask(tasks, setTasks, task.id)}
-						completeTask={event =>
-							completeTask(event, tasks, setTasks, task.id)
-						}
+						completeTask={() => completeTask(tasks, setTasks, task.id)}
 					/>
 				);
 			})}
@@ -30,13 +28,17 @@ const deleteTask = (tasks, setTasks, taskId) => {
 	setTasks(filteredTasks);
 };
 
-const completeTask = (event, tasks, setTasks, taskId) => {
-	console.log(event.target.checked);
-	console.log(taskId);
+const completeTask = (tasks, setTasks, taskId) => {
+	// versión de tasks actualizada con las modificaciones indicadas
+	const completedTask = tasks.map(task => {
+		if (task.id === taskId) {
+			task.completed = !task.completed;
+		}
+		// Aquí abajo estamos devolviendo cada tarea de tasks en cada vuelta, lo que conformará un array nuevo con todas las tareas y sus modificaciones
+		return task;
+	});
 
-	const completedTask = tasks.filter(task => task.id === taskId);
-
-	completedTask[0].completed = true;
+	setTasks(completedTask);
 };
 
 export default TasksContainer;

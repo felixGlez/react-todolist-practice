@@ -9,10 +9,7 @@ const Task = ({ task, deleteTask, completeTask }) => {
 	return (
 		<>
 			<StyledTask>
-				<StyledCheckbox
-					onChange={event => completeTask(event)}
-					type='checkbox'
-				/>
+				<StyledCheckbox onChange={completeTask} type='checkbox' />
 				<StyledTaskText>{task}</StyledTaskText>
 				<StyledDeleteButton
 					onClick={deleteTask}
