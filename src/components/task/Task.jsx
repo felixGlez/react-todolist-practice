@@ -9,7 +9,11 @@ const Task = ({ task, deleteTask, completeTask }) => {
 	return (
 		<>
 			<StyledTask>
-				<StyledCheckbox type='checkbox' onChange={completeTask} />
+				<StyledCheckbox
+					type='checkbox'
+					onChange={completeTask}
+					checked={task.completed}
+				/>
 				<StyledTaskText>{task.task}</StyledTaskText>
 				<StyledDeleteButton
 					src='./images/icon-cross.svg'
