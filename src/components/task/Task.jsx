@@ -14,7 +14,9 @@ const Task = ({ task, deleteTask, completeTask }) => {
 					onChange={completeTask}
 					checked={task.completed}
 				/>
-				<StyledTaskText>{task.task}</StyledTaskText>
+				<StyledTaskText $isCompleted={task.completed}>
+					{task.task}
+				</StyledTaskText>
 				<StyledDeleteButton
 					src='./images/icon-cross.svg'
 					onClick={deleteTask}
