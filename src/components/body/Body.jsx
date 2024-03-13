@@ -22,7 +22,12 @@ const Body = () => {
 		<StyledBody>
 			<Form tasks={filteredTasks} setTasks={setTasks} />
 			<TasksContainer tasks={filteredTasks} setTasks={setTasks} />
-			<Footer filter={filter} setFilter={setFilter} />
+			<Footer
+				filter={filter}
+				setFilter={setFilter}
+				tasks={tasks}
+				setTasks={setTasks}
+			/>
 		</StyledBody>
 	);
 };

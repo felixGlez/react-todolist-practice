@@ -1,9 +1,12 @@
 import { FILTERS } from '../../constants/filters';
+import ClearItems from '../clear-items/ClearItems';
+import ItemsLeft from '../items-left/ItemsLeft';
 import { StyledStatus, StyledFooter } from './styles';
 
-const Footer = ({ filter, setFilter }) => {
+const Footer = ({ filter, setFilter, tasks, setTasks }) => {
 	return (
 		<StyledFooter>
+			<ItemsLeft tasks={tasks} />
 			<StyledStatus
 				$isSelected={filter === FILTERS.ALL}
 				onClick={() => setFilter(FILTERS.ALL)}
@@ -22,6 +25,9 @@ const Footer = ({ filter, setFilter }) => {
 			>
 				Completed
 			</StyledStatus>
+			<ClearItems tasks={tasks} setTasks={setTasks}>
+				Clear Completed
+			</ClearItems>
 		</StyledFooter>
 	);
 };
